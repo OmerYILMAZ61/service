@@ -65,6 +65,11 @@ public class PersonRest {
 		return Response.ok().build();
 	}
 	
+	@POST
+	@Path("/toplama/")
+	public Response toplama(@FormParam("veri1") int veri1,@FormParam("veri2") int veri2){
+		return Response.ok(String.valueOf((veri1+veri2))).build();
+	}
 	
 	
 	
